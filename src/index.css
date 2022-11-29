@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200;300;400;500;600;700;800&display=swap');
+
+body{
+    margin:0px;
+    padding: 0px;
+    background-color: #140C1F;
+    font-family: 'Oxanium', cursive;
+    background-image: url("../src/assets/images/coverImage.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-position: center; 
+    /* scroll-behavior: smooth; */
+}
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+/* scroll bar desigin */
+::-webkit-scrollbar{
+    width: 8px;
+    background-color: #140C1F;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #C778DD;
+    border-radius: 10px;
+}
