@@ -315,7 +315,7 @@ function DrawerAppBar(props, { children }) {
                 </Drawer>
             </Box>
             <Box component="main" sx={{
-                p: 3,
+                // p: 3,
                 // backgroundColor: '#140C1F',
                 width: '100%',
 
@@ -323,7 +323,15 @@ function DrawerAppBar(props, { children }) {
                 <Toolbar />
                 <Box
                     sx={{
-                        pl: 8,
+                        px: {
+                            md: 10,
+                            xs: 2,
+                        },
+                        pt: {
+                            xs: 0,
+                            sm: 28,
+                            lg: 8,
+                        },
                     }}
                 >
                     <Outlet />
