@@ -38,12 +38,12 @@ export default function Hero() {
               alt='hero-image'
               sx={{
                 height: {
-                  xs: '180px',
-                  lg: '250px'
+                  xs: '170px',
+                  lg: '250px',
                 },
                 width: {
-                  xs: '180px',
-                  lg: '250px'
+                  xs: '170px',
+                  lg: '250px',
                 },
               }}
 
@@ -83,7 +83,10 @@ export default function Hero() {
       <Stack
         sx={{
           position: 'absolute',
-          left: '25%',
+          left: {
+            md: '25%',
+            xs: '20%'
+          },
           top: '-25%',
           zIndex: 1,
         }}
@@ -108,12 +111,12 @@ export default function Hero() {
               alt='hero-image'
               sx={{
                 height: {
-                  xs: '180px',
-                  lg: '250px'
+                  xs: '170px',
+                  lg: '250px',
                 },
                 width: {
-                  xs: '180px',
-                  lg: '250px'
+                  xs: '170px',
+                  lg: '250px',
                 },
               }}
 
@@ -152,7 +155,11 @@ export default function Hero() {
       <Stack
         sx={{
           position: 'absolute',
-          left: '55%',
+          left: {
+            lg: '55%',
+            xs: '43%',
+
+          },
           bottom: '-15%',
         }}
       >
@@ -175,12 +182,12 @@ export default function Hero() {
               alt='hero-image'
               sx={{
                 height: {
-                  xs: '180px',
-                  lg: '250px'
+                  xs: '170px',
+                  lg: '250px',
                 },
                 width: {
-                  xs: '180px',
-                  lg: '250px'
+                  xs: '170px',
+                  lg: '250px',
                 },
               }}
 
@@ -217,16 +224,23 @@ export default function Hero() {
     )
   }
   return (
-    <Stack>
+    <Stack
+      sx={{
+        py: {
+          lg: 20,
+          md: 15,
+          xs: 0,
+        }
+      }}
+    >
       <Grid container
-        sx={{
-          alignItems: 'center',
-        }}
         spacing={{
-          xs: 10,
+          xs: 20,
+          md: 0,
         }}
+
       >
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} lg={6} >
           <Stack
             spacing={4}
           >
@@ -264,31 +278,27 @@ export default function Hero() {
             </Stack>
           </Stack>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <Stack
-            sx={{
-              width: '100%',
-              height: 600,
-              // bgcolor: '#f00',
-              position: 'relative',
+        <Grid item xs={12} lg={6}
+          ml={{
+            xs: 0,
+            sm: 10,
+            md: 0,
+          }}
 
+        >
+
+          <Box
+            sx={{
+              width: 600,
+              position: 'relative',
             }}
-            alignItems='center'
-            justifyContent='center'
           >
-            <Stack
-              sx={{
-                position: 'relative',
-                //  bgcolor: '#f00',
-                width: '100%',
-                // height: 400
-              }}
-            >
-              <Card1 />
-              <Card2 />
-              <Card3 />
-            </Stack>
-          </Stack>
+            <Card1 />
+            <Card2 />
+            <Card3 />
+
+          </Box>
+
         </Grid>
       </Grid>
     </Stack >
