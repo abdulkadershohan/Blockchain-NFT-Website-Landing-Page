@@ -328,7 +328,7 @@ function DrawerAppBar(props, { children }) {
                         },
                         pt: {
                             xs: 0,
-                            sm: 28,
+                            md: 28,
                             lg: 8,
                         },
                     }}
