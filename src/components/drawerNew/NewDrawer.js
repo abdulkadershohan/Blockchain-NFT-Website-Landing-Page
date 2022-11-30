@@ -172,7 +172,7 @@ function DrawerAppBar(props, { children }) {
                         aria-label="open drawer"
                         edge="start"
                         onClick={() => setMobileOpen(true)}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2, display: { md: 'none' } }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -188,7 +188,7 @@ function DrawerAppBar(props, { children }) {
                             py: 4,
                             display: {
                                 xs: 'none',
-                                sm: 'flex',
+                                md: 'flex',
                             }
                         }}
                         spacing={2}

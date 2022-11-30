@@ -38,11 +38,13 @@ export default function Hero() {
               alt='hero-image'
               sx={{
                 height: {
-                  xs: '170px',
+                  xs: '140px',
+                  sm: '200px',
                   lg: '250px',
                 },
                 width: {
-                  xs: '170px',
+                  xs: '140px',
+                  sm: '200px',
                   lg: '250px',
                 },
               }}
@@ -53,7 +55,8 @@ export default function Hero() {
 
                 fontSize={{
                   lg: '28px',
-                  xs: '20px'
+                  xs: '18px'
+
                 }}
                 fontWeight={400}
                 textAlign='center'
@@ -85,7 +88,7 @@ export default function Hero() {
           position: 'absolute',
           left: {
             md: '25%',
-            xs: '20%'
+            xs: '25%',
           },
           top: '-25%',
           zIndex: 1,
@@ -111,11 +114,13 @@ export default function Hero() {
               alt='hero-image'
               sx={{
                 height: {
-                  xs: '170px',
+                  xs: '140px',
+                  sm: '200px',
                   lg: '250px',
                 },
                 width: {
-                  xs: '170px',
+                  xs: '140px',
+                  sm: '200px',
                   lg: '250px',
                 },
               }}
@@ -125,7 +130,7 @@ export default function Hero() {
               <CTypography
                 fontSize={{
                   lg: '28px',
-                  xs: '20px'
+                  xs: '18px'
                 }}
                 fontWeight={400}
                 textAlign='center'
@@ -157,8 +162,10 @@ export default function Hero() {
           position: 'absolute',
           left: {
             lg: '55%',
-            xs: '43%',
-
+            sm: '55%',
+          },
+          right: {
+            xs: '0%',
           },
           bottom: '-15%',
         }}
@@ -182,11 +189,13 @@ export default function Hero() {
               alt='hero-image'
               sx={{
                 height: {
-                  xs: '170px',
+                  xs: '140px',
+                  sm: '200px',
                   lg: '250px',
                 },
                 width: {
-                  xs: '170px',
+                  xs: '140px',
+                  sm: '200px',
                   lg: '250px',
                 },
               }}
@@ -197,7 +206,8 @@ export default function Hero() {
 
                 fontSize={{
                   lg: '28px',
-                  xs: '20px'
+                  xs: '18px'
+
                 }}
                 fontWeight={400}
                 textAlign='center'
@@ -289,7 +299,11 @@ export default function Hero() {
 
           <Box
             sx={{
-              width: 600,
+              width: {
+                md: 600,
+                xs: '100%',
+                sm: 500,
+              },
               position: 'relative',
             }}
           >
