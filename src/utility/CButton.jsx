@@ -3,7 +3,7 @@ import { Box, Button, Stack } from "@mui/material";
 import * as React from "react";
 import buttonLeft from "../assets/images/buttonLeft.png";
 import buttonRight from "../assets/images/buttonRight.png";
-export default function ContainedButtons({
+export default function CButton({
 	children,
 	buttonLeftStyle,
 	buttonRightStyle,
@@ -38,6 +38,8 @@ export default function ContainedButtons({
 					color: '#fff',
 					lineHeight: 0,
 					borderRadius: '0px',
+					fontFamily: 'Oxanium',
+
 				}}
 				{...rest}
 			>

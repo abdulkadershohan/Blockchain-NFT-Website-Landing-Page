@@ -18,12 +18,10 @@ export default function CTypography({
                 gutterBottom={gutterBottom}
                 noWrap={noWrap}
                 paragraph={paragraph}
-                fontWeight={800}
-                //sx={sx ? sx : { fontWeight: 700, py: 0 }}
-                //  variant={variant ? variant : "h6"}
                 text={text}
                 color={color ? color : "#fff"}
-                //  component={component ? component : "h1"}
+                fontFamily='Oxanium'
+
                 {...rest}
             >
                 {text}{children}

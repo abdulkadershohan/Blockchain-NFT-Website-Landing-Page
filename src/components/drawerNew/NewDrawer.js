@@ -42,7 +42,6 @@ const navbarData = {
 
 function DrawerAppBar(props, { children }) {
     const { routes, logo, logoTitle } = navbarData
-    const [open, setOpen] = React.useState(false);
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
