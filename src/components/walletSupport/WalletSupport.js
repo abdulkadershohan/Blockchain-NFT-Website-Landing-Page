@@ -1,7 +1,7 @@
 import { Avatar } from "@mui/material";
 import { Stack } from "@mui/system";
 import React from "react";
-import { Card, CTypography } from "../../utility";
+import { CCard, CTypography } from "../../utility";
 const logo = [
     {
         id: 1,
@@ -69,7 +69,7 @@ export default function walletSupport() {
             >
                 {
                     logo.map((item) => (
-                        <Card
+                        <CCard
                             key={item.id}
                             p={3}
                             background={'linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);'}
@@ -78,7 +78,7 @@ export default function walletSupport() {
                             borderWidth='0px'
                             noHover
                         >
-                            <Card
+                            <CCard
                                 background={'linear-gradient(147.75deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);'}
                                 backdropFilter="blur(10px)"
                                 borderRadius={50}
@@ -95,7 +95,7 @@ export default function walletSupport() {
                                     }}
                                 />
 
-                            </Card>
+                            </CCard>
                             <CTypography
                                 fontSize={20}
                                 fontWeight={500}
@@ -106,7 +106,7 @@ export default function walletSupport() {
                             >
                                 {item.name}
                             </CTypography>
-                        </Card>
+                        </CCard>
                     ))
 
                 }
