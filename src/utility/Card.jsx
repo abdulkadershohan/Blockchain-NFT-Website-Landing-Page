@@ -1,7 +1,7 @@
 import { Box } from "@mui/system";
 import React from "react";
 
-export default function Card({ background, borderWidth, borderRadius, borderColor, backdropFilter, children, ...rest }) {
+export default function Card({ background, borderWidth, borderRadius, borderColor, backdropFilter, children, noHover, ...rest }) {
     return (
         <Box
             sx={{
@@ -12,10 +12,12 @@ export default function Card({ background, borderWidth, borderRadius, borderColo
                 backdropFilter: backdropFilter || 'blur(17.915px)',
                 borderRadius: borderRadius || '41.6667px',
                 width: 'fit-content',
-                '&:hover': {
-                    background: 'linear-gradient(160.61deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 101.7%);',
-                    borderColor: 'rgba(255, 255, 255, 0.6)',
-                },
+                ...(!noHover && {
+                    '&:hover': {
+                        background: 'linear-gradient(160.61deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 101.7%);',
+                        borderColor: 'rgba(255, 255, 255, 0.6)',
+                    },
+                })
             }}
             {...rest}
         >{children}</Box>

@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Hero from "../components/hero/Hero";
+import Home from "../components/home/Home";
 // import Hero from "../components/hero/Hero";
 import Navbar from "../components/navbar/Navbar";
 import ScrollToTop from "./ScrollToTop";
@@ -11,7 +11,7 @@ export default function UserRoutes() {
             <ScrollToTop />
             <Navbar />
             <Routes>
-                <Route path="/" element={<Hero />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/a" element={<div>
                     <p
                         style={{
