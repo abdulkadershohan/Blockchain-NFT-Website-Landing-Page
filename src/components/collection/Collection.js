@@ -74,6 +74,7 @@ export default function Collection() {
     return (
         <Stack
             py={10}
+            spacing={4}
         >
             <CTypography
                 fontSize={25}

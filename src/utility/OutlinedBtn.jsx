@@ -7,6 +7,8 @@ export default function OutlinedBtn({
 	children,
 	buttonLeftStyle,
 	buttonRightStyle,
+	btnPadding,
+	btnHeight,
 	btnTitle,
 	...rest
 }) {
@@ -32,8 +34,8 @@ export default function OutlinedBtn({
 			<Button
 				sx={{
 					background: 'rgba(173, 26, 175, 0.05)',
-					height: '50px',
-					p: '10px 40px',
+					height: btnHeight || '50px',
+					p: btnPadding || '10px 40px',
 					border: '1px solid #AD1AAF',
 					fontWeight: 500,
 					fontSize: '14px',
