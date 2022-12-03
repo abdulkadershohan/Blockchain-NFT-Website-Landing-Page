@@ -1,5 +1,6 @@
 import { Stack } from "@mui/system";
 import React from "react";
+import Collection from "../collection/Collection";
 import Hero from "../hero/Hero";
 import HowItWorks from "../howItWorks/HowItWorks";
 import WalletSupport from "../walletSupport/WalletSupport";
@@ -12,6 +13,7 @@ export default function Home() {
             <Hero />
             <WalletSupport />
             <HowItWorks />
+            <Collection />
         </Stack>
     );
 }
