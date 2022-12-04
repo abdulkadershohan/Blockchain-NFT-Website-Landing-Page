@@ -5,6 +5,7 @@ import Collection from "../collection/Collection";
 import Hero from "../hero/Hero";
 import HowItWorks from "../howItWorks/HowItWorks";
 import Influencers from "../influencers/Influencers";
+import NftDrop from "../nftDrop/NftDrop";
 import TendingNFts from "../tendingNFts/TendingNFts";
 import WalletSupport from "../walletSupport/WalletSupport";
 
@@ -20,6 +21,7 @@ export default function Home() {
             <TendingNFts />
             <AuctionNFTs />
             <Influencers />
+            <NftDrop />
         </Stack>
     );
 }
