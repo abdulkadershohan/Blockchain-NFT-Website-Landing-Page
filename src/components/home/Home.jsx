@@ -1,5 +1,6 @@
 import { Stack } from "@mui/system";
 import React from "react";
+import AuctionNFTs from "../auctionNFTs/AuctionNFTs";
 import Collection from "../collection/Collection";
 import Hero from "../hero/Hero";
 import HowItWorks from "../howItWorks/HowItWorks";
@@ -16,6 +17,7 @@ export default function Home() {
             <HowItWorks />
             <Collection />
             <TendingNFts />
+            <AuctionNFTs />
         </Stack>
     );
 }
