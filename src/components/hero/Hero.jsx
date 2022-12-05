@@ -236,19 +236,22 @@ export default function Hero() {
   return (
     <Stack
       sx={{
+        px: {
+          lg: 10,
+          xs: 2,
+        },
         py: {
-          lg: 20,
-          md: 15,
-          xs: 0,
-        }
+          lg: 8,
+          xs: 2,
+        },
       }}
     >
       <Grid container
+        alignItems='center'
         spacing={{
-          xs: 20,
-          md: 0,
+          xs: 10,
+          lg: 0
         }}
-
       >
         <Grid item xs={12} lg={6} >
           <Stack
@@ -264,11 +267,10 @@ export default function Hero() {
               EXPLORE, CREATE AND SELL YOUR  NFT’S  ON SHIHAMI
             </CTypography>
             <CTypography
-              fontSize='20px'
-              fontWeight={300}
-              textTransform='capitalize'
-              fontFamily='lato'
-
+              fontSize={20}
+              fontWeight={100}
+              fontFamily="Poppins"
+              textTransform="capitalize"
             >
               Shihami is the World’s first and largest NFT/Avatar marketplace
             </CTypography>
@@ -289,11 +291,8 @@ export default function Hero() {
           </Stack>
         </Grid>
         <Grid item xs={12} lg={6}
-          ml={{
-            xs: 0,
-            sm: 10,
-            md: 0,
-          }}
+          alignItems='center'
+          justifyContent='center'
 
         >
 

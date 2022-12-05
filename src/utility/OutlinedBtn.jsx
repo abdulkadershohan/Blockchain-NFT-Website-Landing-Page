@@ -7,6 +7,12 @@ export default function OutlinedBtn({
 	children,
 	buttonLeftStyle,
 	buttonRightStyle,
+	btnPadding,
+	btnHeight,
+	btnBackground,
+	btnBorder,
+	btnBorderRadius,
+	noBar,
 	btnTitle,
 	...rest
 }) {
@@ -16,32 +22,32 @@ export default function OutlinedBtn({
 			alignItems={'center'}
 		>
 
-			<Box
-				//component="img"
-				//src={buttonLeft}
-				// alt="button-left"
-				// sx={buttonLeftStyle || {
-				// 	height: 50
-				// }}
-				sx={{
-					height: '28px',
-					width: '4px',
-					backgroundColor: '#AD1AAF',
-				}}
-			/>
+			{
+				!noBar && (
+					<Box
+						sx={{
+							height: '28px',
+							width: '4px',
+							backgroundColor: '#AD1AAF',
+						}}
+					/>
+				)
+			}
+
 			<Button
 				sx={{
-					background: 'rgba(173, 26, 175, 0.05)',
-					height: '50px',
-					p: '10px 40px',
-					border: '1px solid #AD1AAF',
+					background: btnBackground || 'rgba(173, 26, 175, 0.05)',
+					height: btnHeight || '50px',
+					p: btnPadding || '10px 40px',
+					border: btnBorder || '1px solid #AD1AAF',
 					fontWeight: 500,
 					fontSize: '14px',
 					textTransform: 'capitalize',
 					fontFamily: 'Oxanium',
 					color: '#fff',
 					lineHeight: 0,
-					borderRadius: '0px',
+					borderRadius: btnBorderRadius || '0px',
+
 				}}
 				{...rest}
 			>
@@ -55,19 +61,21 @@ export default function OutlinedBtn({
 					height: 50
 				}}
 			/> */}
-			<Box
-				//component="img"
-				//src={buttonLeft}
-				// alt="button-left"
-				// sx={buttonLeftStyle || {
-				// 	height: 50
-				// }}
-				sx={{
-					height: '28px',
-					width: '4px',
-					backgroundColor: '#AD1AAF',
-				}}
-			/>
+			{
+				!noBar && (<Box
+					//component="img"
+					//src={buttonLeft}
+					// alt="button-left"
+					// sx={buttonLeftStyle || {
+					// 	height: 50
+					// }}
+					sx={{
+						height: '28px',
+						width: '4px',
+						backgroundColor: '#AD1AAF',
+					}}
+				/>)
+			}
 
 		</Stack>
 	);

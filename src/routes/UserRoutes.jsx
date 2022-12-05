@@ -1,14 +1,37 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DrawerAppBar from "../components/drawerNew/NewDrawer";
-import Hero from "../components/hero/Hero";
+import Footer from "../components/footer/Footer";
+import Home from "../components/home/Home";
+// import Hero from "../components/hero/Hero";
+import Navbar from "../components/navbar/Navbar";
+import { CTypography } from "../utility";
 import ScrollToTop from "./ScrollToTop";
 
 export default function UserRoutes() {
     return (
         <BrowserRouter>
             <ScrollToTop />
+            <Navbar />
             <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="*" element={<CTypography
+                    align={"center"}
+                    fontSize={{
+                        lg: 80,
+                        md: 60,
+                        sm: 30,
+                        xs: 25
+                    }}
+                >
+                    Path   Not Found back to <a href="/"
+                        style={{
+                            color: "blue",
+                        }}
+                    >Home</a>
+                </CTypography>} />
+            </Routes>
+            <Footer />
+            {/* <Routes>
                 <Route
                     path="/"
                     element={
@@ -31,7 +54,7 @@ export default function UserRoutes() {
                     <Route path="*" element={<h1>Not Found</h1>} />
                 </Route>
 
-            </Routes>
+            </Routes> */}
         </BrowserRouter>
     );
 }
