@@ -73,7 +73,10 @@ export default function Collection() {
 
     return (
         <Stack
-            py={10}
+            py={{
+                sm: 10,
+                xs: 0
+            }}
             spacing={4}
         >
             <CTypography

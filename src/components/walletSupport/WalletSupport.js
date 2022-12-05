@@ -31,10 +31,13 @@ const logo = [
     }
 ]
 
-export default function walletSupport() {
+export default function WalletSupport() {
     return (
         <Stack spacing={5}
-            py={10}
+            py={{
+                sm: 10,
+                xs: 0
+            }}
         >
             <CTypography
                 fontSize={25}

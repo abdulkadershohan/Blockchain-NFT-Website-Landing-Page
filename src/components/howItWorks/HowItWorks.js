@@ -36,7 +36,10 @@ export default function HowItWorks() {
     return (
         <Stack
             gap={4}
-            py={10}
+            py={{
+                sm: 10,
+                xs: 0
+            }}
         >
             <CTypography
                 fontWeight={500}

@@ -240,7 +240,10 @@ export default function Influencers() {
     return (
         <Stack
             px={10}
-            py={10}
+            py={{
+                sm: 10,
+                xs: 0
+            }}
             spacing={8}
         >
             <TopSection />
