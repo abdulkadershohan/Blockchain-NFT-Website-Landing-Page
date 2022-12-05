@@ -116,7 +116,8 @@ export default function TendingNFts() {
                         textTransform="capitalize"
                         fontSize={{
                             md: 70,
-                            xs: 30
+                            sm: 30,
+                            xs: 25
                         }}
 
                     >

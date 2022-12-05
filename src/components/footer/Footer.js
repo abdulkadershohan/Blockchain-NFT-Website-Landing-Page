@@ -92,8 +92,8 @@ export default function Footer() {
                 sx={{
                     cursor: "pointer",
                 }}
-                component={Link}
-                to="/"
+                component={'a'}
+                href={'#'}
                 justifyContent="center"
 
             >
@@ -132,7 +132,7 @@ export default function Footer() {
                                     color={'#96839B'}
                                     fontSize="18px"
                                     fontWeight="500"
-                                    fontFamily="cursive"
+                                    fontFamily="sans-serif"
 
                                 >
                                     {description}
@@ -164,7 +164,7 @@ export default function Footer() {
                                 fontWeight="400"
                                 color="#96839B"
                                 py={2}
-                                fontFamily="cursive"
+                                fontFamily="sans-serif"
                                 display={{
                                     xs: "none",
                                     sm: "block",
@@ -187,12 +187,12 @@ export default function Footer() {
                             </CTypography>
                             <Stack spacing={2}>
                                 {
-                                    footerData.aboutLinks.map((item) => (
+                                    aboutLinks.map((item) => (
                                         <CTypography
                                             key={Math.random()}
                                             fontSize="14px"
                                             fontWeight="400"
-                                            fontFamily="cursive"
+                                            fontFamily="sans-serif"
                                             color={'#96839B'}
                                             component={Link}
                                             to={item.link}
@@ -222,12 +222,12 @@ export default function Footer() {
                             </CTypography>
                             <Stack spacing={2}>
                                 {
-                                    footerData.supportLinks.map((item) => (
+                                    supportLinks.map((item) => (
                                         <CTypography
                                             key={Math.random()}
                                             fontSize="14px"
                                             fontWeight="400"
-                                            fontFamily="cursive"
+                                            fontFamily="sans-serif"
                                             color={'#96839B'}
                                             component={Link}
                                             to={item.link}
@@ -273,7 +273,7 @@ export default function Footer() {
                 fontWeight="400"
                 color="#96839B"
                 py={2}
-                fontFamily="cursive"
+                fontFamily="sans-serif"
                 align={'center'}
                 display={{
                     xs: "block",

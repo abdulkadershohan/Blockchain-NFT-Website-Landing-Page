@@ -105,7 +105,8 @@ export default function Influencers() {
                         textTransform="capitalize"
                         fontSize={{
                             md: 70,
-                            xs: 30
+                            smL: 30,
+                            xs: 25
                         }}
                     >
                         joined influencers

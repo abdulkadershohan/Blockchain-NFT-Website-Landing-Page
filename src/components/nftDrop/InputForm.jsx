@@ -51,7 +51,7 @@ export default function InputForm() {
                         color: 'rgba(164, 142, 169, 1)',
                         fontSize: '24px',
                         fontWeight: '400',
-                        fontFamily: 'cursive',
+                        fontFamily: 'Poppins',
                         opacity: 0.7,
                         py: 3
 
