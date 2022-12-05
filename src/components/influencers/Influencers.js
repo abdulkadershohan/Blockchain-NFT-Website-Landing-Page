@@ -81,11 +81,13 @@ const influencersData = [
 export default function Influencers() {
     const TopSection = (props) => {
         return (
-            <Stack>
+            <Stack
+                spacing={4}
+            >
                 <CTypography
                     fontSize={18}
                     fontWeight={100}
-                    fontFamily="Lato"
+                    fontFamily="cursive"
                     textTransform="capitalize"
 
                 >
@@ -205,7 +207,7 @@ export default function Influencers() {
                                         <CTypography
                                             fontSize={16}
                                             fontWeight={200}
-                                            fontFamily="Lato"
+                                            fontFamily="cursive"
                                             textTransform="capitalize"
                                             color='#CBCBCB'
                                         >
@@ -235,7 +237,7 @@ export default function Influencers() {
         <Stack
             px={10}
             py={10}
-            spacing={4}
+            spacing={8}
         >
             <TopSection />
             <CardSection />

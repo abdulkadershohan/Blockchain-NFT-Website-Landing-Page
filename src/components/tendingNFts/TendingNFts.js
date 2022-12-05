@@ -91,11 +91,13 @@ const TendingNFtsData = [
 export default function TendingNFts() {
     const TopSection = (props) => {
         return (
-            <Stack>
+            <Stack
+                spacing={4}
+            >
                 <CTypography
                     fontSize={18}
                     fontWeight={100}
-                    fontFamily="Lato"
+                    fontFamily="cursive"
                     textTransform="capitalize"
 
                 >
@@ -146,6 +148,7 @@ export default function TendingNFts() {
                             borderRadius={'15px'}
                             p={1}
                             noHover
+                            borderWidth={'0px'}
                         >
                             <Box
                                 sx={{
@@ -213,7 +216,7 @@ export default function TendingNFts() {
                                             <CTypography
                                                 fontSize={14}
                                                 fontWeight={200}
-                                                fontFamily="Lato"
+                                                fontFamily="cursive"
                                                 textTransform="lowercase"
                                             >
                                                 @{item.userName}
@@ -283,7 +286,7 @@ export default function TendingNFts() {
         <Stack
             px={10}
             py={10}
-            spacing={4}
+            spacing={8}
         >
             <TopSection />
             <CardSection />

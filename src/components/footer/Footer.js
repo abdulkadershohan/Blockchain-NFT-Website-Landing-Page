@@ -174,7 +174,7 @@ export default function Footer() {
                             </CTypography>
                         </Stack>
                     </Grid>
-                    <Grid item xs={12} sm={3} >
+                    <Grid item xs={6} sm={3} >
                         <Stack
                             spacing={2}
                         >
@@ -209,7 +209,7 @@ export default function Footer() {
                             </Stack>
                         </Stack>
                     </Grid>
-                    <Grid item xs={12} sm={3} >
+                    <Grid item xs={6} sm={3} >
                         <Stack
                             spacing={2}
                         >
@@ -252,8 +252,12 @@ export default function Footer() {
     return (
         <Stack
             px={10}
-            py={10}
+            py={12}
             spacing={4}
+            sx={{
+                background: 'linear-gradient(147.75deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.005) 100%)',
+                backdropFilter: 'blur(20px)',
+            }}
         >
             <Grid container spacing={6}>
                 <Grid item xs={12} md={4}

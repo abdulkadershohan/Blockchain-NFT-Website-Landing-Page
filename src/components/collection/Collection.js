@@ -80,7 +80,7 @@ export default function Collection() {
                 fontSize={25}
                 fontWeight={400}
                 textAlign="center"
-                fontFamily="Lato"
+                fontFamily="cursive"
                 sx={{
                     background: 'linear-gradient(90.13deg, #FFFFFF 0%, #F81DFB 99.96%);',
                     WebkitBackgroundClip: 'text',

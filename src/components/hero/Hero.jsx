@@ -270,7 +270,7 @@ export default function Hero() {
               fontSize='20px'
               fontWeight={300}
               textTransform='capitalize'
-              fontFamily='lato'
+              fontFamily='cursive'
 
             >
               Shihami is the World’s first and largest NFT/Avatar marketplace

@@ -8,6 +8,7 @@ export default function NftDrop() {
         <Stack
             px={10}
             py={10}
+            pb={20}
             spacing={4}
             alignItems="center"
         >

@@ -36,6 +36,7 @@ export default function HowItWorks() {
     return (
         <Stack
             gap={4}
+            py={10}
         >
             <CTypography
                 fontSize={64}
