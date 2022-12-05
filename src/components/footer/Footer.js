@@ -1,235 +1,283 @@
-import { Grid } from "@mui/material";
-import { Box, Stack } from "@mui/system";
+import { Box, Grid } from "@mui/material";
+import { Stack } from "@mui/system";
 import React from "react";
-import discord from "../../assets/Icon/discord.svg";
-import figma from "../../assets/Icon/figma.svg";
-import github from "../../assets/Icon/github.svg";
-import linkedin from "../../assets/Icon/linkedin.svg";
-import telegram from "../../assets/Icon/telegram.svg";
-import twitter from "../../assets/Icon/twitter.svg";
-import logo from "../../assets/images/logo.png";
+import { Link } from 'react-router-dom';
+import logo from '../../assets/images/logo.png';
+import FbIcon from "../../assets/svg/FbIcon";
+import GoogleIcon from "../../assets/svg/GoogleIcon";
+import TwitterIcon from "../../assets/svg/TwitterIcon";
+import YoutubeIcon from "../../assets/svg/YoutubeIcon";
 import { CTypography } from "../../utility";
+
 const footerData = {
-    socials: [
+    logo: logo,
+    description: 'Shihami is the world’s leading NFTs marketplace where you can discover, sell and bid NFTs and get rich ',
+    socialLinks: [
         {
             id: 1,
-            name: 'github',
-            link: "https://github.com/abdulkadershohan",
-            img: github
+            name: 'youtube',
+            icon: <YoutubeIcon />,
         },
         {
             id: 2,
-            name: 'linkedin',
-            link: "https://www.linkedin.com/in/abdulkadershohan/",
-            img: linkedin
+            name: 'twitter',
+            icon: <TwitterIcon />,
         },
         {
             id: 3,
-            name: 'telegram',
-            link: "https://t.me/Abdulkadershohan",
-            img: telegram
+            name: 'facebook',
+            icon: <FbIcon />,
         },
         {
             id: 4,
-            name: 'twitter',
-            link: "https://twitter.com/dev_shohan",
-            img: twitter
-        },
-        {
-            id: 5,
-            name: 'discord',
-            link: "https://discord.com/users/522431317447802900",
-            img: discord
+            name: 'google plus',
+            icon: <GoogleIcon />,
         }
     ],
-    socialsTitle: "Social Media",
-    discription: `Frontend Engineer & React Native developer based in Bangladesh`,
-    link: 'https://dev-shohan.netlify.app/',
-    copyRight: 'Abdul Kader Shohan. All rights reserved.',
-    logo: logo,
-    logoTitle: 'Abdul Kader',
-    refText: 'Special Thanks to Elias Dev for sharing this UI/UX design with Figma Community',
+    copyRight: 'Shihami. All rights reserved.',
+    aboutLinks: [
+        {
+            id: 1,
+            name: 'About NFT',
+            link: '/about-nft',
+        },
+        {
+            id: 2,
+            name: 'Live Auctions',
+            link: '/live-auctions',
+        },
+        {
+            id: 3,
+            name: 'NFT Blog',
+            link: '/nft-blog',
+        },
+        {
+            id: 4,
+            name: 'Activity',
+            link: '/activity',
 
+        }
+    ],
+    supportLinks: [
+        {
+            id: 1,
+            name: 'Help & Support',
+            link: '/help-support',
+        },
+        {
+            id: 2,
+            name: 'Item Details',
+            link: '/item-details',
+        },
+        {
+            id: 3,
+            name: 'Author Profile',
+            link: '/author-profile',
+        },
+        {
+            id: 4,
+            name: 'Collection',
+            link: '/collection',
+        }
+    ]
 }
-
 export default function Footer() {
-    const { socials, socialsTitle, discription, link, copyRight, logo, logoTitle,
-        refText } = footerData;
-    return (
-        <Stack
-            sx={{
-                borderTop: '1px solid #ABB2BF',
-                py: 8,
-            }}
-        >
-            <Grid container spacing={2}
+    const { logo, description, socialLinks, copyRight, aboutLinks, supportLinks } = footerData;
+    const LogoSection = () => {
+        return (
+            <Stack
+                direction="row"
+                alignItems="center"
+                spacing={1}
+                sx={{
+                    cursor: "pointer",
+                }}
+                component={Link}
+                to="/"
+                justifyContent="center"
+
             >
-                <Grid item xs={12} md={6}
-                    sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
+                <img src={logo} alt="logo"
+                    style={{
+                        width: 80,
+                        height: 80
                     }}
+                />
+                <CTypography
+                    fontSize="50px"
+                    fontWeight="700"
+                    textTransform="uppercase"
+
                 >
-                    <Stack
-                        spacing={4}
-                    >
+                    hihami
+                </CTypography>
+            </Stack>
+        )
+    }
+    const ContentSection = () => {
+        return (
+            <Stack>
+                <Grid container spacing={6}>
+                    <Grid item xs={12} sm={6} >
                         <Stack
-                            direction="row"
-                            spacing={6}
+                            gap={4}
                         >
-                            <Stack
-                                direction="row"
-                                alignItems="center"
-                                spacing={1}
-                                component="a"
-                                href="/"
-                                sx={{
-                                    cursor: "pointer",
+                            <Box
+                                width={{
+                                    xs: "100%",
+                                    lg: "75%",
                                 }}
                             >
-                                <img src={logo} alt="logo"
-                                    style={{ width: 15, height: 15 }}
-                                />
-                                <CTypography>
-                                    {logoTitle}
-                                </CTypography>
-                            </Stack>
-                            <CTypography
-                                fontSize="16px"
-                                fontWeight={400}
-                                color="#ABB2BF"
-                                component={"a"}
-                                href="/"
-                                target="_blank"
-                            >
-                                {link}
-                            </CTypography>
-                        </Stack>
+                                <CTypography
+                                    color={'#96839B'}
+                                    fontSize="18px"
+                                    fontWeight="500"
+                                    fontFamily="cursive"
 
-                        <CTypography
-                            fontSize="16px"
-                            fontWeight={400}
-                            align="center"
-                        >
-                            {discription}
-                        </CTypography>
-                        {/* <Stack>
-                            {
-                                refText && (
-                                    <>
-                                        <CTypography
-                                            fontSize="12px"
-                                            fontWeight={400}
-                                            color="#ABB2BF"
-                                        >
-                                            {refText}
-                                        </CTypography>
-                                        <Box>
-                                            <Box
-                                                component={"a"}
-                                                href={"https://www.figma.com/community/file/1164933568884615740"}
-                                                target="_blank"
-                                            >
-                                                <img src={figma} alt="figma" />
-                                            </Box>
-                                        </Box>
-                                    </>
-                                )
-                            }
-                        </Stack> */}
-                    </Stack>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                    <Stack
-                        alignItems="center"
-                        justifyContent='center'
-                    >
-                        <CTypography>
-                            {socialsTitle}
-                        </CTypography>
-                        <Stack
-                            direction="row"
-                            py={1}
-                            gap={1}
-                        >
-                            {
-                                socials.map((item, index) => {
-                                    return (
-                                        <Box
-                                            component={"a"}
-                                            href={item.link}
-                                            target="_blank"
-                                            key={Math.random()}
+                                >
+                                    {description}
+                                </CTypography>
+                            </Box>
+                            <Stack
+                                direction="row"
+                                spacing={4}
+                            >
+                                {
+                                    socialLinks.map((item) => (
+                                        <Stack
                                             sx={{
                                                 '&:hover': {
+                                                    color: '#fff',
+                                                    cursor: 'pointer',
                                                     transform: 'scale(1.1)',
+                                                },
+                                            }}
+                                        >
+                                            {item.icon}
+                                        </Stack>
+                                    ))
+                                }
+
+                            </Stack>
+                            <CTypography
+                                fontSize="14px"
+                                fontWeight="400"
+                                color="#96839B"
+                                py={2}
+                                fontFamily="cursive"
+                                display={{
+                                    xs: "none",
+                                    sm: "block",
+                                }}
+                            >
+                                © {new Date().getFullYear()} {copyRight}
+                            </CTypography>
+                        </Stack>
+                    </Grid>
+                    <Grid item xs={12} sm={3} >
+                        <Stack
+                            spacing={2}
+                        >
+                            <CTypography
+                                fontWeight="700"
+                                fontSize="24px"
+                                color={'#F5FBF2'}
+                            >
+                                About
+                            </CTypography>
+                            <Stack spacing={2}>
+                                {
+                                    footerData.aboutLinks.map((item) => (
+                                        <CTypography
+                                            key={Math.random()}
+                                            fontSize="14px"
+                                            fontWeight="400"
+                                            fontFamily="cursive"
+                                            color={'#96839B'}
+                                            component={Link}
+                                            to={item.link}
+                                            sx={{
+                                                '&:hover': {
+                                                    color: '#fff'
                                                 }
                                             }}
                                         >
-                                            <Box
-                                                component='img'
-                                                src={item.img}
-                                                alt="item.name"
-                                            >
-
-                                            </Box>
-
-                                        </Box>
-                                    )
-                                })
-                            }
-
-
-                        </Stack>
-                        <Stack
-                            justifyContent='center'
-                            alignItems='center'
-                        >
-                            {
-                                refText && (
-                                    <>
-                                        <CTypography
-                                            fontSize="12px"
-                                            fontWeight={400}
-                                            color="#ABB2BF"
-                                        >
-                                            {refText}
+                                            {item.name}
                                         </CTypography>
-                                        <Box>
-                                            <Box
-                                                component={"a"}
-                                                href={"https://www.figma.com/community/file/1164933568884615740"}
-                                                target="_blank"
-                                            >
-                                                <img src={figma} alt="figma" />
-                                            </Box>
-                                        </Box>
-                                    </>
-                                )
-                            }
+                                    ))
+                                }
+                            </Stack>
                         </Stack>
-                    </Stack>
+                    </Grid>
+                    <Grid item xs={12} sm={3} >
+                        <Stack
+                            spacing={2}
+                        >
+                            <CTypography
+                                fontWeight="700"
+                                fontSize="24px"
+                                color={'#F5FBF2'}
+                            >
+                                Support
+                            </CTypography>
+                            <Stack spacing={2}>
+                                {
+                                    footerData.supportLinks.map((item) => (
+                                        <CTypography
+                                            key={Math.random()}
+                                            fontSize="14px"
+                                            fontWeight="400"
+                                            fontFamily="cursive"
+                                            color={'#96839B'}
+                                            component={Link}
+                                            to={item.link}
+                                            sx={{
+                                                '&:hover': {
+                                                    color: '#fff'
+                                                }
+                                            }}
+                                        >
+                                            {item.name}
+                                        </CTypography>
+                                    ))
+                                }
+                            </Stack>
+                        </Stack>
+                    </Grid>
+
+                </Grid>
+            </Stack >
+        )
+    }
+    return (
+        <Stack
+            px={10}
+            py={10}
+            spacing={4}
+        >
+            <Grid container spacing={6}>
+                <Grid item xs={12} md={4}
+                >
+                    <LogoSection />
+                </Grid>
+                <Grid item xs={12} md={8}>
+                    <ContentSection />
                 </Grid>
             </Grid>
-
-            <Stack
-                justifyContent="center"
-                alignItems="center"
-                py={6}
+            <CTypography
+                fontSize="14px"
+                fontWeight="400"
+                color="#96839B"
+                py={2}
+                fontFamily="cursive"
+                align={'center'}
+                display={{
+                    xs: "block",
+                    sm: "none",
+                }}
             >
-                <CTypography
-                    fontSize="12px"
-                    fontWeight={400}
-                    color="#ABB2BF"
-                >
-                    ©{' '}
-                    {
-                        new Date().getFullYear()
-                    }
-                    {' '}
-                    {copyRight}
-                </CTypography>
-            </Stack>
-        </Stack >
+                © {new Date().getFullYear()} {copyRight}
+            </CTypography>
+        </Stack>
     )
 }

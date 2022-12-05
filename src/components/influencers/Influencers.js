@@ -153,6 +153,7 @@ export default function Influencers() {
                                             src={item.image1}
                                             width={155}
                                             height={160}
+                                            borderRadius={'15px'}
 
                                         />
                                         <Avatar
@@ -175,6 +176,7 @@ export default function Influencers() {
                                         src={item.image2}
                                         width={125}
                                         height={160}
+                                        borderRadius={'15px'}
 
                                     />
 
