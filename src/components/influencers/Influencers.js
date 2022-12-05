@@ -105,8 +105,7 @@ export default function Influencers() {
                         textTransform="capitalize"
                         fontSize={{
                             md: 70,
-                            sm: 30,
-                            xs: 20
+                            xs: 30
                         }}
                     >
                         joined influencers
@@ -239,7 +238,11 @@ export default function Influencers() {
     }
     return (
         <Stack
-            px={10}
+            px={{
+                md: 10,
+                sm: 5,
+                xs: 2
+            }}
             py={{
                 sm: 10,
                 xs: 0
