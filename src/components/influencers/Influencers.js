@@ -87,7 +87,7 @@ export default function Influencers() {
                 <CTypography
                     fontSize={18}
                     fontWeight={100}
-                    fontFamily="cursive"
+                    fontFamily="Poppins"
                     textTransform="capitalize"
 
                 >
@@ -211,7 +211,7 @@ export default function Influencers() {
                                         <CTypography
                                             fontSize={16}
                                             fontWeight={200}
-                                            fontFamily="cursive"
+                                            fontFamily="Poppins"
                                             textTransform="capitalize"
                                             color='#CBCBCB'
                                         >

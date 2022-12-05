@@ -267,11 +267,10 @@ export default function Hero() {
               EXPLORE, CREATE AND SELL YOUR  NFT’S  ON SHIHAMI
             </CTypography>
             <CTypography
-              fontSize='20px'
-              fontWeight={300}
-              textTransform='capitalize'
-              fontFamily='cursive'
-
+              fontSize={20}
+              fontWeight={100}
+              fontFamily="Poppins"
+              textTransform="capitalize"
             >
               Shihami is the World’s first and largest NFT/Avatar marketplace
             </CTypography>

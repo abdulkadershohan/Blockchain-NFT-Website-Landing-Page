@@ -99,7 +99,7 @@ export default function AuctionNFTs() {
                 <CTypography
                     fontSize={18}
                     fontWeight={100}
-                    fontFamily="cursive"
+                    fontFamily="Poppins"
                     textTransform="capitalize"
 
                 >
@@ -218,7 +218,7 @@ export default function AuctionNFTs() {
                                             <CTypography
                                                 fontSize={14}
                                                 fontWeight={200}
-                                                fontFamily="cursive"
+                                                fontFamily="Poppins"
                                                 textTransform="lowercase"
                                             >
                                                 @{item.userName}
