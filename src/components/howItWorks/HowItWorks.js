@@ -39,10 +39,14 @@ export default function HowItWorks() {
             py={10}
         >
             <CTypography
-                fontSize={64}
-                fontWeight={600}
+                fontWeight={500}
                 textAlign="center"
                 fontFamily="Oxanium"
+                fontSize={{
+                    lg: 64,
+                    md: 50,
+                    xs: 45
+                }}
             >
                 How it works
             </CTypography>

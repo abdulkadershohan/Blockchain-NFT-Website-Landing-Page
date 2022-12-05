@@ -112,9 +112,13 @@ export default function AuctionNFTs() {
                     my={2}
                 >
                     <CTypography
-                        fontSize={70}
                         fontWeight={600}
                         fontFamily="Oxanium"
+                        fontSize={{
+                            md: 70,
+                            sm: 30,
+                            xs: 20
+                        }}
                     >
                         Live Auction nFTs
                     </CTypography>

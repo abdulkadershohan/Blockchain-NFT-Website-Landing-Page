@@ -110,10 +110,15 @@ export default function TendingNFts() {
                     my={2}
                 >
                     <CTypography
-                        fontSize={70}
+                        // fontSize={70}
                         fontWeight={600}
                         fontFamily="Oxanium"
                         textTransform="capitalize"
+                        fontSize={{
+                            md: 70,
+                            sm: 30,
+                            xs: 20
+                        }}
 
                     >
                         hot trending nFTs

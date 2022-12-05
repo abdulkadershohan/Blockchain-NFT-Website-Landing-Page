@@ -51,7 +51,11 @@ export default function walletSupport() {
                 Trade with world’s most trusted and fastest wallets
             </CTypography>
             <CTypography
-                fontSize={100}
+                fontSize={{
+                    lg: 80,
+                    md: 50,
+                    xs: 45
+                }}
                 fontWeight={500}
                 textAlign="center"
                 color="white"

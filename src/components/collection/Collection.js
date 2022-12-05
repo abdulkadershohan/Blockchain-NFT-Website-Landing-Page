@@ -91,13 +91,17 @@ export default function Collection() {
                 Explore our newly released NFT collection
             </CTypography>
             <CTypography
-                fontSize={100}
                 fontWeight={500}
                 textAlign="center"
                 color="white"
                 fontFamily="Oxanium"
                 textTransform="capitalize"
                 mb={2}
+                fontSize={{
+                    md: 100,
+                    sm: 80,
+                    xs: 60
+                }}
             >
                 Our collection
             </CTypography>
